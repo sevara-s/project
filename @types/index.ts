@@ -14,3 +14,9 @@ export interface UserType {
   updatedAt: Date;
   token: string;
 }
+ export interface sidebarMenuType {
+  id: number
+  title: string
+  path: string
+  Icon?: any
+}
