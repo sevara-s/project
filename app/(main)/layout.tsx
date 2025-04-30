@@ -31,14 +31,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex">
+          <Providres>
+          <div className="flex h-screen overflow-hidden">
             <Sidebar />
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col flex-1 overflow-auto">
               <Header />
-              {children}
+              <main className="flex-1 p-4 md:p-6 overflow-auto">
+                {children}
+              </main>
             </div>
-          </main>
+          </div>
           <Toaster position="bottom-right"/>
+          </Providres>
         </ThemeProvider>
       </body>
     </html>
